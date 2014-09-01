@@ -47,7 +47,7 @@ The internal array. Realize that if you mutate this
 you might break stuff if you do not preserve
 the order of the keys.
 
-### BinaryMap#toJSON
+### BinaryMap#toJSON()
 
 Return a copy of the internal array.
 This does not clone the keys or values,
