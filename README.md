@@ -21,19 +21,25 @@ create a new `binary-map` instance with the given comparator.
 By default [typewiselite](https://github.com/dominictarr/typewiselite) is used,
 which should be sufficent for most purposes.
 
-### BinaryMay#set(key, value)
+### BinaryMap#set(key, value)
 
 set a key to a value
 
-### BinaryMay#get(key)
+### BinaryMap#add({key, value})
+
+Like set, except add a pair of values.
+The object passed in will be used in the external datastructure,
+so do not mutate it after calling this.
+
+### BinaryMap#get(key)
 
 return the value for key, or undefined
 
-### BinaryMay#has(key)
+### BinaryMap#has(key)
 
 return true if `key` is stored.
 
-### i = BinaryMay#getIndex(key)
+### i = BinaryMap#getIndex(key)
 
 return the index key is stored at in the internal array.
 If return value is negative, key is not in the array.
