@@ -28,13 +28,16 @@ module.exports = function (_compare) {
     },
     //update a key
     set: function (key, value) {
-      var o = {key: key, value: value}
+      return kv.add({key: key, value: value})
+    },
+    add: function (o) {
       var i = search(ary, o, cmp)
 
       //overwrite a key, or insert a key
       if(i < 0) ary.splice(~i, 0, o)
       else      ary[i] = o
       return i
+
     },
     toJSON: function () {
       return ary.slice()
