@@ -1,7 +1,7 @@
 {
   "name": "binary-map",
   "description": "in-memory key/value store based on binary search, that support buffers as keys",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "homepage": "https://github.com/dominictarr/binary-map",
   "repository": {
     "type": "git",
